@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank App - Income & Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Bank App</h1>
+            <ul>
+                <li><a href="#dashboard">Home</a></li>
+                <li><a href="#transactions">Transactions</a></li>
+                <li><a href="#summary">Summary</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="dashboard">
+        <div class="balance">
+            <h2>Current Balance</h2>
+            <p id="balance-amount">₹0.00</p>
+        </div>
+        <div class="totals">
+            <div class="total-income">
+                <h3>Total Income</h3>
+                <p id="total-income">₹0.00</p>
+            </div>
+            <div class="total-expense">
+                <h3>Total Expense</h3>
+                <p id="total-expense">₹0.00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="transactions">
+        <h2>Add New Transaction</h2>
+        <form id="transaction-form">
+            <select id="transaction-type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <button type="submit">Add Transaction</button>
+        </form>
+
+        <h2>Transaction History</h2>
+        <ul id="transaction-list"></ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
